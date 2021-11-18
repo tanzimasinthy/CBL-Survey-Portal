@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
-    @RequestMapping(value = "/api/officer/create", method = RequestMethod.POST)
+    @RequestMapping(value = "/api/employee/create", method = RequestMethod.POST)
     public ResponseDTO create(@RequestBody EmployeeCreateDTO input, @RequestHeader(value = HttpHeader.REQUESTER) String requesterStr)
     {
         User requester = Utils.generateUserFromJsonStr(requesterStr);
@@ -23,7 +23,7 @@ public class EmployeeController {
         return result;
     }
 
-    @RequestMapping(value = "/api/officer/get-list",method = RequestMethod.GET)
+    @RequestMapping(value = "/api/employee/get-list",method = RequestMethod.GET)
     public ResponseDTO getList(@RequestHeader(value = HttpHeader.REQUESTER) String requesterStr)
     {
         User requester = Utils.generateUserFromJsonStr(requesterStr);
@@ -31,7 +31,7 @@ public class EmployeeController {
         return result;
     }
 
-    @RequestMapping(value = "/api/officer/get/{id}",method = RequestMethod.GET)
+    @RequestMapping(value = "/api/employee/get/{id}",method = RequestMethod.GET)
     public ResponseDTO get(@PathVariable("id") ObjectId id, @RequestHeader(value = HttpHeader.REQUESTER) String requesterStr)
     {
         User requester = Utils.generateUserFromJsonStr(requesterStr);
@@ -39,7 +39,7 @@ public class EmployeeController {
         return result;
     }
 
-    @RequestMapping(value = "/api/officer/update",method = RequestMethod.PUT)
+    @RequestMapping(value = "/api/employee/update",method = RequestMethod.PUT)
     public ResponseDTO update(@RequestBody EmployeeUpdateDTO input, @RequestHeader(value = HttpHeader.REQUESTER) String requesterStr)
     {
         User requester = Utils.generateUserFromJsonStr(requesterStr);
@@ -47,7 +47,7 @@ public class EmployeeController {
         return result;
     }
 
-    @RequestMapping(value = "/api/officer/delete/{id}",method = RequestMethod.DELETE)
+    @RequestMapping(value = "/api/employee/delete/{id}",method = RequestMethod.DELETE)
     public ResponseDTO delete(@PathVariable("id") ObjectId id,@RequestHeader(value = HttpHeader.REQUESTER) String requesterStr)
     {
         User requester = Utils.generateUserFromJsonStr(requesterStr);
