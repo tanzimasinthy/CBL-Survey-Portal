@@ -1,6 +1,6 @@
 package com.cblSurveyPortal.service;
 
-import com.cblSurveyPortal.dto.AdminLoginDTO;
+import  com.cblSurveyPortal.dto.AdminLoginDTO;
 import com.cblSurveyPortal.dto.EmployeeLoginDTO;
 import com.cblSurveyPortal.dto.RegistrationDTO;
 import com.cblSurveyPortal.dto.ResponseDTO;
